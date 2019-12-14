@@ -41,14 +41,10 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.textView4);
         next = findViewById(R.id.button4);
 
-        Bundle extras = getIntent().getExtras();
-        hasil = extras.getString(KEY_BARCODE);
-        textView.setText(hasil);
-
         scan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                Intent intent = new Intent(MainActivity.this, webview.class);
                 startActivity(intent);
                 finish();
             }

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">scanner</string>
+    <string name="vena_smarthome">VENA SMARTHOME</string>
+    <string name="wifi_configuration">WiFI Configuration</string>
 </resources>

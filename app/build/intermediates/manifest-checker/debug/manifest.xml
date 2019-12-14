@@ -9,6 +9,7 @@
         android:targetSdkVersion="29" />
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +20,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true" >
+        <activity android:name="com.asnproject.scanner.webview" />
+        <activity android:name="com.asnproject.scanner.Main3Activity" />
         <activity android:name="com.asnproject.scanner.Main2Activity" />
         <activity android:name="com.asnproject.scanner.MainActivity" >
             <intent-filter>

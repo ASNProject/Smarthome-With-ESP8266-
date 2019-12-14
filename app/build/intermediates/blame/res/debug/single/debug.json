@@ -1592,6 +1592,10 @@
         "source": "C:\\Users\\ARIEF SETYO NUGROHO\\.gradle\\caches\\transforms-2\\files-2.1\\c0c1bfc0d1dedf65bf9be01cfae0f347\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "E:\\PROJECT ANDROID STUDIO\\scanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main3.xml.flat",
+        "source": "E:\\PROJECT ANDROID STUDIO\\scanner\\app\\src\\main\\res\\layout\\activity_main3.xml"
+    },
+    {
         "merged": "E:\\PROJECT ANDROID STUDIO\\scanner\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_dark.xml.flat",
         "source": "C:\\Users\\ARIEF SETYO NUGROHO\\.gradle\\caches\\transforms-2\\files-2.1\\c0c1bfc0d1dedf65bf9be01cfae0f347\\res\\color\\abc_primary_text_material_dark.xml"
     },
@@ -2010,6 +2014,10 @@
     {
         "merged": "E:\\PROJECT ANDROID STUDIO\\scanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_code_scanner_auto_focus_on.png.flat",
         "source": "C:\\Users\\ARIEF SETYO NUGROHO\\.gradle\\caches\\transforms-2\\files-2.1\\330938f0875bfa93059c5ac1a5b0ccf0\\res\\drawable-xhdpi-v4\\ic_code_scanner_auto_focus_on.png"
+    },
+    {
+        "merged": "E:\\PROJECT ANDROID STUDIO\\scanner\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_webview.xml.flat",
+        "source": "E:\\PROJECT ANDROID STUDIO\\scanner\\app\\src\\main\\res\\layout\\activity_webview.xml"
     },
     {
         "merged": "E:\\PROJECT ANDROID STUDIO\\scanner\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_36dp.png.flat",
