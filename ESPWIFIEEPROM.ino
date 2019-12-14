@@ -112,6 +112,9 @@ void setup()
   while ((WiFi.status() != WL_CONNECTED))
   {
     Serial.print(".");
+    digitalWrite(ledpin, HIGH); 
+    delay(100);
+    digitalWrite(ledpin, LOW);
     delay(100);
     server.handleClient();
   }
@@ -149,6 +152,7 @@ void loop() {
     }
   else
   {
+
   }
 }
 
