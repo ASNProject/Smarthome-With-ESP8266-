@@ -1,4 +1,4 @@
-#Sat Dec 14 15:02:11 ICT 2019
+#Sun Dec 15 23:59:06 ICT 2019
 base.0=E\:\\PROJECT ANDROID STUDIO\\scanner\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
 path.0=classes.dex
 renamed.0=classes.dex

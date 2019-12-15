@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-35:12
 MERGED from [com.karumi:dexter:5.0.0] C:\Users\ARIEF SETYO NUGROHO\.gradle\caches\transforms-2\files-2.1\d72ecbe16513bbad40e25aeb10ce40a9\AndroidManifest.xml:17:1-32:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\ARIEF SETYO NUGROHO\.gradle\caches\transforms-2\files-2.1\b159a477789b39c5838e4ef14b206b10\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\ARIEF SETYO NUGROHO\.gradle\caches\transforms-2\files-2.1\c0c1bfc0d1dedf65bf9be01cfae0f347\AndroidManifest.xml:17:1-24:12
@@ -40,20 +40,20 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\ARIEF SETYO NUGROHO\.gradle\ca
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\ARIEF SETYO NUGROHO\.gradle\caches\transforms-2\files-2.1\ba6c189ad69034cba19d1b8890ab2279\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\ARIEF SETYO NUGROHO\.gradle\caches\transforms-2\files-2.1\cf321faf4eaa0047ca27fd64659ebadb\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\ARIEF SETYO NUGROHO\.gradle\caches\transforms-2\files-2.1\ae0f76b5f2d2370494e79b4035e458c9\AndroidManifest.xml:17:1-22:12
-INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml
 		INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-35:12
 		INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:1-35:12
 		INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:2:11-69
@@ -62,11 +62,23 @@ ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:5:
 	android:name
 		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:5:22-62
 uses-permission#android.permission.INTERNET
-ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:6:5-66
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:6:5-67
 	android:name
 		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.WAKE_LOCK
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:7:5-68
+	android:name
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:7:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:9:22-76
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:10:5-75
+	android:name
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:10:22-72
 application
-ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:8:5-26:19
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:12:5-33:19
 MERGED from [com.karumi:dexter:5.0.0] C:\Users\ARIEF SETYO NUGROHO\.gradle\caches\transforms-2\files-2.1\d72ecbe16513bbad40e25aeb10ce40a9\AndroidManifest.xml:26:5-30:19
 MERGED from [com.karumi:dexter:5.0.0] C:\Users\ARIEF SETYO NUGROHO\.gradle\caches\transforms-2\files-2.1\d72ecbe16513bbad40e25aeb10ce40a9\AndroidManifest.xml:26:5-30:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\ARIEF SETYO NUGROHO\.gradle\caches\transforms-2\files-2.1\b159a477789b39c5838e4ef14b206b10\AndroidManifest.xml:22:5-20
@@ -80,45 +92,53 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\AR
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\ARIEF SETYO NUGROHO\.gradle\caches\transforms-2\files-2.1\b53f69ea9a4625ff79130a071ad4585e\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:17:9-35
 	android:label
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:15:9-41
 	android:roundIcon
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:16:9-43
 	android:icon
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:14:9-38
 	android:allowBackup
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:15:9-65
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:18:9-65
 	android:usesCleartextTraffic
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:14:9-44
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:19:9-44
+activity#com.asnproject.scanner.Control1
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:20:9-46
+	android:name
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:20:19-43
 activity#com.asnproject.scanner.webview
-ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:16:9-54
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:21:9-45
 	android:name
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:16:19-42
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:21:19-42
 activity#com.asnproject.scanner.Main3Activity
-ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:17:9-51
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:22:9-51
 	android:name
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:17:19-48
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:22:19-48
 activity#com.asnproject.scanner.Main2Activity
-ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:18:9-51
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:23:9-51
 	android:name
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:18:19-48
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:23:19-48
 activity#com.asnproject.scanner.MainActivity
-ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:19:9-25:20
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:24:9-30:20
 	android:name
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:19:19-47
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:24:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:20:13-24:29
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
-ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:23:17-77
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:23:27-74
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:28:27-74
+service#org.eclipse.paho.android.service.MqttService
+ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:32:9-88
+	android:name
+		ADDED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml:32:18-77
 uses-sdk
 INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\PROJECT ANDROID STUDIO\scanner\app\src\main\AndroidManifest.xml

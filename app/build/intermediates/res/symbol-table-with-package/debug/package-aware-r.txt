@@ -1082,8 +1082,11 @@ id ALT
 id CTRL
 id FUNCTION
 id META
+id Pass
+id Port
 id SHIFT
 id SYM
+id User
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -1146,8 +1149,11 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btControl1
+id button2
 id button3
 id button4
+id button8
 id buttonPanel
 id center
 id center_horizontal
@@ -1176,6 +1182,7 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id editText3
 id edit_query
 id end
 id enterAlways
@@ -1205,6 +1212,7 @@ id invisible
 id italic
 id item_touch_helper_previous_elevation
 id judul
+id label
 id labeled
 id largeLabel
 id left
@@ -1299,8 +1307,9 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
+id textView2
 id textView3
-id textView4
 id textView5
 id text_input_password_toggle
 id textinput_counter
@@ -1383,6 +1392,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_control1
 layout activity_main
 layout activity_main2
 layout activity_main3

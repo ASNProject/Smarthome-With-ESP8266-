@@ -6,22 +6,35 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class webview extends AppCompatActivity {
+    Button Next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
+        Next = (Button) findViewById(R.id.button8);
 
         showDialog();
         WebView web = (WebView)findViewById(R.id.webview);
         web.getSettings().setJavaScriptEnabled(true);
         web.setWebViewClient(new  MyBrowser());
         web.loadUrl("http://192.168.4.1/");
+
+        Next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(webview.this, Main2Activity.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
 
     private class MyBrowser extends WebViewClient {
@@ -31,6 +44,8 @@ public class webview extends AppCompatActivity {
             return true;
         }
     }
+
+
 
     private void showDialog(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
