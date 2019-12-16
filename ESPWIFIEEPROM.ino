@@ -28,12 +28,20 @@
 #include <ESP8266HTTPClient.h>
 #include <ESP8266WebServer.h>
 #include <EEPROM.h>
+#include <PubSubClient.h>
 
 //Variables
 int i = 0;
 int statusCode;
 const char* ssid = "text";
 const char* passphrase = "text";
+
+//MQTTT Variable
+const char* mqttServer = "tailor.cloudmqtt.com"; 
+const int mqttPort = 13522; 
+const char* mqttUser = "dncrdumf"; 
+const char* mqttPassword = "JLxl6L3MGMed"; 
+
 String st;
 String content;
 
@@ -41,6 +49,14 @@ int ledpin = 5; // D1(gpio5)
 int button = 4; //D2(gpio4)
 int buttonState=0;
 String rst;
+
+//Konfigurasi Server MQTT
+WiFiClient espClient;
+PubSubClient client(espClient);
+
+const int LED2 = 0;
+
+void mqtt_callback(char* topic, byte* dados_tcp, unsigned int length);
 
 
 //Function Decalration
@@ -52,6 +68,7 @@ void setupAP(void);
 ESP8266WebServer server(80);
 
 void(* reset) (void) =0;
+
 
 void setup()
 {
@@ -98,8 +115,8 @@ void setup()
   {
     Serial.println("Succesfully Connected!!!");
     return;
-  }
-  else
+
+  }else
   {
     Serial.println("Turning the HotSpot On");
     launchWeb();
@@ -117,25 +134,38 @@ void setup()
     digitalWrite(ledpin, LOW);
     delay(100);
     server.handleClient();
+
   }
 
-
-
-
 }
+
+void callback(char* topic, byte* dados_tcp, unsigned int length) {
+    for (int a = 0; a < length; a++) {
+      }
+  if ((char)dados_tcp[0] == 'L' && (char)dados_tcp[1] == '1') {
+    digitalWrite(ledpin, HIGH);   
+  } else if((char)dados_tcp[0] == 'L' && (char)dados_tcp[1] == '2'){
+    digitalWrite(ledpin, LOW);  
+  }
+  if ((char)dados_tcp[0] == 'L' && (char)dados_tcp[1] == '2') {
+    digitalWrite(LED2, HIGH);   
+  } else if((char)dados_tcp[0] == 'D' && (char)dados_tcp[1] == '2'){
+    digitalWrite(LED2, LOW);  
+  }
+} 
+
 void loop() {
-  
+
   if ((WiFi.status() == WL_CONNECTED))
   {
 
     for (int i = 0; i < 10; i++)
     {
-     digitalWrite(LED_BUILTIN, HIGH);
-     delay(1000);
-      digitalWrite(LED_BUILTIN, LOW);
-      delay(1000);
-
-
+    mqtt();
+    //client.publish("Status ","Reiniciado!");
+    //client.publish("Placa","Em funcionamento!");
+    client.subscribe("LED"); 
+    client.loop();
 
        buttonState=digitalRead(button); // put your main code here, to run repeatedly:
         if (buttonState == HIGH)
@@ -154,6 +184,7 @@ void loop() {
   {
 
   }
+
 }
 
 
@@ -170,7 +201,10 @@ bool testWifi(void)
     delay(500);
     Serial.print("*");
     c++;
+    
+    
   }
+
   Serial.println("");
   Serial.println("Connect timed out, opening AP");
   return false;
@@ -308,4 +342,26 @@ void createWebServer()
 
     });
   } 
+}
+
+void mqtt(){
+   client.setServer(mqttServer, mqttPort);
+   client.setCallback(callback);
+   while (!client.connected()) {
+    Serial.println("Connect to Server MQTT...");
+    
+    if (client.connect("Projeto", mqttUser, mqttPassword ))
+    {
+ 
+      Serial.println("Connected to server MQTT Successfully!");  
+ 
+    } else {
+ 
+      Serial.print("Not Connected Server MQTT ");
+      Serial.print(client.state());
+      delay(1000);
+ 
+    }
+  }
+
 }
