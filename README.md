@@ -3,6 +3,8 @@
                                                                                                                        
  Original Program "https://how2electronics.com/esp8266-manual-wifi-configuration-without-hard-code-with-eeprom/"
  
+ Reference:https://github.com/jacksontaylorjp/Esp8266-MQTT-AndroidStudio
+ 
  Developed by Arief Setyo Nugroho
  
  Email:asnprojet02@gmial.com
