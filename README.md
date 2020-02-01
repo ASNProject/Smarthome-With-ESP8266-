@@ -17,6 +17,11 @@ Tampilan Aplikasi yang dibuat
 
 ![Screenshot_20200116_214650](https://user-images.githubusercontent.com/49858542/72536297-90050580-38ac-11ea-810d-5cdb834e9f59.jpg)
 
+5. Barcode MQTT
+
+![barcode MQTT](https://user-images.githubusercontent.com/49858542/73585529-b6de5100-44d4-11ea-9cbd-0b51d073a2cd.png)
+
+
 Web MQTT : https://api.cloudmqtt.com/console/82650892/details
 
 Bahan
