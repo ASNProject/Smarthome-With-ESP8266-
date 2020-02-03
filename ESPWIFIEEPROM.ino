@@ -29,6 +29,16 @@
 #include <ESP8266WebServer.h>
 #include <EEPROM.h>
 #include <PubSubClient.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x3F, 16, 2);
+//SDA = D4
+//SCL = D3
+//RELAY =D8
+
+unsigned long previousMillis = millis(); 
+unsigned long previousMillis2 = millis(); 
+unsigned long previousMillis3 = millis(); 
 
 //Variables
 int i = 0;
@@ -46,7 +56,9 @@ String st;
 String content;
 
 int ledpin = 5; // D1(gpio5)
+int ledpin1 = 13; // D1(gpio5)
 int button = 4; //D2(gpio4)
+const int relay1 = 15;
 int buttonState=0;
 String rst;
 
@@ -72,11 +84,16 @@ void(* reset) (void) =0;
 
 void setup()
 {
+  Wire.begin(2,0);
+  lcd.init();
+  lcd.backlight();
   pinMode(ledpin, OUTPUT);
   pinMode(button, INPUT);
+  pinMode(relay1, OUTPUT);
   digitalWrite(ledpin, HIGH);
   delay(1000);
   digitalWrite(ledpin, LOW);
+  digitalWrite(relay1, HIGH);
   Serial.begin(115200); //Initialising if(DEBUG)Serial Monitor
   Serial.println();
   Serial.println("Disconnecting previously connected WiFi");
@@ -100,7 +117,10 @@ void setup()
   Serial.print("SSID: ");
   Serial.println(esid);
   Serial.println("Reading EEPROM pass");
-
+  lcd.setCursor(0,0);
+  lcd.print("   WiFi Setup");
+  lcd.setCursor(0,1);
+  lcd.print(" Read SSID/PASS");
   String epass = "";
   for (int i = 32; i < 96; ++i)
   {
@@ -115,21 +135,30 @@ void setup()
   {
     Serial.println("Succesfully Connected!!!");
     return;
-
+    //lcd.clear();
+   // lcd.print("Connected");
   }else
   {
     Serial.println("Turning the HotSpot On");
+    
+    lcd.setCursor(0,0);
+    lcd.print("   WiFi Setup");
+    lcd.setCursor(0,1);
+    lcd.print("Turning the HotSpot On");
     launchWeb();
     setupAP();// Setup HotSpot
   }
 
   Serial.println();
   Serial.println("Waiting.");
+ // lcd.clear();
+ // lcd.print("Waiting");
   
   while ((WiFi.status() != WL_CONNECTED))
   {
     Serial.print(".");
     digitalWrite(ledpin, HIGH); 
+   // digitalWrite(relay1, HIGH);
     delay(100);
     digitalWrite(ledpin, LOW);
     delay(100);
@@ -139,15 +168,18 @@ void setup()
 
 }
 
+//Masukkan program relay disini
 void callback(char* topic, byte* dados_tcp, unsigned int length) {
     for (int a = 0; a < length; a++) {
       }
   if ((char)dados_tcp[0] == 'L' && (char)dados_tcp[1] == '1') {
-    digitalWrite(ledpin, HIGH);   
+    digitalWrite(relay1, LOW);   
+    digitalWrite(ledpin1, HIGH);
   } else if((char)dados_tcp[0] == 'L' && (char)dados_tcp[1] == '2'){
-    digitalWrite(ledpin, LOW);  
+    digitalWrite(relay1, HIGH);  
+    digitalWrite(ledpin1, LOW);
   }
-  if ((char)dados_tcp[0] == 'L' && (char)dados_tcp[1] == '2') {
+  if ((char)dados_tcp[0] == 'L' && (char)dados_tcp[1] == '3') {
     digitalWrite(LED2, HIGH);   
   } else if((char)dados_tcp[0] == 'D' && (char)dados_tcp[1] == '2'){
     digitalWrite(LED2, LOW);  
@@ -155,10 +187,10 @@ void callback(char* topic, byte* dados_tcp, unsigned int length) {
 } 
 
 void loop() {
-
+  buttonState=digitalRead(button); // put your main code here, to run repeatedly:
+  lcdprint();
   if ((WiFi.status() == WL_CONNECTED))
   {
-
     for (int i = 0; i < 10; i++)
     {
     mqtt();
@@ -166,26 +198,35 @@ void loop() {
     //client.publish("Placa","Em funcionamento!");
     client.subscribe("LED"); 
     client.loop();
-
-       buttonState=digitalRead(button); // put your main code here, to run repeatedly:
-        if (buttonState == HIGH)
-       {
-       digitalWrite(ledpin, HIGH); 
-       Serial.println(buttonState);
-         for (int i = 0; i < 512; i++) {
-        EEPROM.write(i, 0);
-     }
-     EEPROM.end();
-       reset();
-         }
        }
     }
+  if (buttonState == HIGH)
+  {
+  digitalWrite(ledpin, HIGH); 
+  Serial.println(buttonState);
+  for (int i = 0; i < 512; i++) {
+  EEPROM.write(i, 0);
+  }
+  EEPROM.end();
+  reset();
+  } 
   else
   {
 
   }
+ 
 
 }
+
+
+
+
+
+
+
+
+
+
 
 
 //-------- Fuctions used for WiFi credentials saving and connecting to it which you do not need to change 
@@ -209,6 +250,8 @@ bool testWifi(void)
   Serial.println("Connect timed out, opening AP");
   return false;
 }
+
+
 
 void launchWeb()
 {
@@ -269,7 +312,7 @@ void setupAP(void)
   }
   st += "</ol>";
   delay(100);
-  WiFi.softAP("how2electronics", "");
+  WiFi.softAP("venergi", "");//ganti nama wifi perangkat disini
   Serial.println("softap");
   launchWeb();
   Serial.println("over");
@@ -364,4 +407,31 @@ void mqtt(){
     }
   }
 
+}
+
+void lcdprint(){
+if ((millis() - previousMillis) >= 3000){
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("  Vena  Energy");
+    lcd.setCursor(0,1);
+    lcd.print("   Connected   ");
+    previousMillis = millis();
+   }
+    if ((millis() - previousMillis2) >= 5000){
+   lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("  Vena  Energy");
+    lcd.setCursor(0,1);
+    lcd.print("Battery:     mAh");
+   previousMillis2 = millis();
+   }
+    if ((millis() - previousMillis3) >= 7000){
+   lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("  Vena  Energy");
+    lcd.setCursor(0,1);
+    lcd.print("Sensor:  ");
+    previousMillis3 = millis();
+   }
 }
