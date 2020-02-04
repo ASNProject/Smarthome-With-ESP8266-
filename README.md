@@ -16,9 +16,7 @@
  
  Yogyakarta
 
-Skematic with Fritzing
 
-![espeeprom](https://user-images.githubusercontent.com/49858542/70826194-e21fba80-1e18-11ea-82d3-4739a2745cab.jpg)
 =======
 # Smarthome-With-ESP8266-
 
@@ -53,7 +51,8 @@ Bahan
 
 Skematic Sistem yang dibuat
 
-![Untitled Sketch_bb](https://user-images.githubusercontent.com/49858542/72533728-339fe700-38a8-11ea-964e-e4299275eec7.jpg)
+![baru](https://user-images.githubusercontent.com/49858542/73773248-69076880-47b4-11ea-9816-f8e5daa73474.jpg)
+
 
 Referensi :
 
