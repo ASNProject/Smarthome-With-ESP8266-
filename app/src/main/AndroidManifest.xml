@@ -17,6 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
+        <activity android:name=".BatteryActivity"></activity>
+        <activity android:name=".ActivitySensor" />
         <activity android:name=".Control1" />
         <activity android:name=".webview" />
         <activity android:name=".Main3Activity" />
@@ -29,7 +31,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name="org.eclipse.paho.android.service.MqttService"></service>
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
     </application>
 
 </manifest>
