@@ -48,6 +48,8 @@ Bahan
 1. Nodemcu Lolin v3
 2. Button
 3. Led
+4. LCD 16x2 I2C
+5. Relay 5v
 
 Skematic Sistem yang dibuat
 
